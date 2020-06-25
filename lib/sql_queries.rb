@@ -51,7 +51,7 @@ end
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
   <<-SQL
   SELECT
-  users.name,
+  projects.categories,
   SUM(pledges.amount) as amount
   FROM users
   INNER JOIN pledges
