@@ -53,7 +53,7 @@ def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_ca
   SELECT
   projects.categories,
   SUM(pledges.amount) as amount
-  FROM users
+  FROM projects
   INNER JOIN pledges
   ON pledges.user_id = users.id
   GROUP BY users.name
